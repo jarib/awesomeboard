@@ -1,0 +1,15 @@
+Simple application we use to harvest tweets about our company real time and then have them displayed in an application.
+
+Uses the Twitter Streaming API
+FINN.no
+
+Pre-requisits
+- Twitter account
+- An installation of MongoDB running
+- ExpressJS
+- Mongodb for NodeJS
+- Twitter-node
+- Connect
+- Mime
+- Qs
+
