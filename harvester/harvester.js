@@ -1,4 +1,3 @@
-#!/opt/local/bin/node
 require.paths.unshift(__dirname + "/../lib");
 
 var mongo = require("mongodb"),
