@@ -1,0 +1,123 @@
+html {
+    height: 100%
+}
+
+body, table, input, textarea {
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    overflow: hidden;
+    background: transparent url(../img/bg.jpg) repeat;
+    height: 100%;
+    width: 100%;
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+    box-orient: horizontal;
+    margin: 0;
+    padding: 0;
+}
+.awesomeboard {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    margin: 20px 20px 30px 0;
+}
+
+.awesomeboard .twatboard {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+    box-pack: center;
+    border-radius: 20px;
+    background: #C0DEED url("../img/bg-clouds.png") 0 0 no-repeat;
+    -webkit-box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.5), 3px 3px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.5), 3px 3px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.5), 3px 3px 5px rgba(0, 0, 0, 0.3);
+    border: 10px solid white;
+}
+
+.twatboard .twatownerstuff {
+    background-color: rgba(255, 255, 255, 0.7);
+    display: block;
+    position: relative;
+    height: 73px;
+    padding: 10px 25px;
+}
+
+.twatboard .twatavatarpic {
+    background: transparent url("../img/einartho.jpg");
+    height: 73px;
+    width: 73px;
+    border-radius: 10px
+}
+
+.twatboard .twatmessage {
+    xheight: 200px;
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 30px;
+    padding: 30px 50px;
+    position: relative
+}
+.twatboard .bubblecrap {
+    position: absolute;
+    top: -45px;
+    left: 100px;
+    background: transparent url("../img/snakkis.png") 0 0 no-repeat;
+    height: 45px;
+    width: 65px;
+}
+
+.twatboard .twatnick {
+    position: absolute;
+    top: -63px;
+    left: 150px;
+    height: 45px;
+}
+
+.twatboard .twatnick span {
+    color: #666;
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+.awesomeboard .mainissues {
+    height: 170px;
+    margin-top: 30px;
+
+}
+div.TWATSKALP {
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    background: transparent url(../img/happyskalp.png) no-repeat;
+    height: 200px;
+    width: 384px;
+    font-size: 9px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    color: #000;
+}
