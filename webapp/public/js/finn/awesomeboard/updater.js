@@ -1,22 +1,22 @@
 var FINN = FINN || {};
 FINN.awesomeboard = FINN.awesomeboard || {};
 
-FINN.awesomeboard.updater = (function(facade, hub){
+FINN.awesomeboard.updater = (function(facade, eventHub){
 	var tweetCache = [];
 	function pollForTweets(){
+		eventHub.publish("retrieving-new-tweets", "");
 		facade.retrieveTweets(function(tweets){
 			if (tweets){
 				if (tweetCache.length == 0 || tweetCache[0].id !== tweets[0].id){
-					console.log("Got new tweeeeets!");
 					tweetCache = tweets;
-					hub.publish("got-new-tweets", tweetCache);
+					eventHub.publish("got-new-tweets", tweetCache);
 				}
 			}
 		});
 		setTimeout(pollForTweets, 20000);
 	}
 	function initiatePollSequence(){
-		hub.subscribe("templates-ready", function(template){
+		eventHub.subscribe("templates-ready", function(template){
 			pollForTweets();
 		});		
 	}

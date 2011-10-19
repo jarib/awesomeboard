@@ -4,16 +4,16 @@
     <meta charset="utf-8">
 		<title>Awesomeboard Mark II</title>
 		{{>awesome_style_partial}}
-		<script src="http://repo.finntech.no/jsrepo/jquery/jquery-1.6.3.js"></script>
+		<script src="js/lib/jquery/jquery-1.6.2.min.js"></script>
 		<script src="/js/lib/mustache/mustache.js"></script>
 		<script>
 		var FINN = FINN || {};
 		</script>
 		<script src="js/finn/eventHub/eventHub.js"></script>
 		<script src="js/finn/awesomeboard/facade.js"></script>
+		<script src="js/finn/awesomeboard/loader.js"></script>
 		<script src="js/finn/awesomeboard/boardmanager.js"></script>
 		<script src="js/finn/awesomeboard/updater.js"></script>
-		<script src="js/finn/awesomeboard/animation.js"></script>
 		<script src="js/finn/awesomeboard/main.js"></script>
 </head>
 
