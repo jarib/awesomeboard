@@ -1,5 +1,6 @@
 (function(F){
     var callback, baseURL = "/api/report";
+	if (console === "undefined") console = {log:function(){}};
     function leaderboard(mainCategory, numDays, limit, callback){
         var command = {
           "category": JSON.stringify(mainCategory),
