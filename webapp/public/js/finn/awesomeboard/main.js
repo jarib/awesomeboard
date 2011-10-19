@@ -13,7 +13,6 @@ FINN.awesomeboard.main = (function(eventHub){
 			document.getElementById("FeedbackPartial").innerHTML = template;
 			eventHub.publish("templates-ready", "FeedbackPartial")
 		});
-		console.log("tempalte ready??");
 	}	
 	return {
 		initialize: initialize,
