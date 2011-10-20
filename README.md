@@ -26,7 +26,7 @@ First clone the application
 
 		$ git clone git@github.com:finn-no/awesomeboard.git
 		
-and then just install the awesomeboard with [http://npm.org](npm)
+and then just install the awesomeboard with [NPM](http://npm.org)
 
 		$ npm install
 		
