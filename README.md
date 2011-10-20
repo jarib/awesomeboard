@@ -25,23 +25,23 @@ We currently only support storing the tweets in MongoDB. Therefor you must insta
 Below is a list of the required NodeJS modules.
 Either install these with NPM or place the content of the modules into the lib directory
 
-* [ExpressJS](http://expressjs.com/)
+[ExpressJS](http://expressjs.com/)
 
 		$ npm install express
 		
-* [Mongodb for NodeJS](https://github.com/christkv/node-mongodb-native)
+[Mongodb for NodeJS](https://github.com/christkv/node-mongodb-native)
 
 		$ npm install mongodb
 		
-* [Twitter-node](https://github.com/technoweenie/twitter-node)
+[Twitter-node](https://github.com/technoweenie/twitter-node)
 
 		$ npm install twitter-node
 		
-* [Connect](http://senchalabs.github.com/connect/)
+[Connect](http://senchalabs.github.com/connect/)
 
 		$ npm install connect
 		
-* [Mustache for NodeJS](https://github.com/raycmorgan/Mu)
+[Mustache for NodeJS](https://github.com/raycmorgan/Mu)
 
 
 Useage
