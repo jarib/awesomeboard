@@ -24,7 +24,7 @@ We currently only support storing the tweets in MongoDB. Therefor you must insta
 
 First clone the application
 
-		$ git clone git@github.com:finn-no/awesomeboard.git
+		$ git clone https://github.com/finn-no/awesomeboard.git
 		
 and then just install the awesomeboard with [NPM](http://npm.org)
 
