@@ -44,7 +44,7 @@ Starting the Awesome Board
 
     node app.js
 
-Now you can check `http://localhost:29099/` or you can view the list mode on http://localhost:29099/list	
+Now you can check `http://localhost:29099/` or you can view the list mode on `http://localhost:29099/list`
 
 About the Awesome Board
 ------------
@@ -52,4 +52,4 @@ About the Awesome Board
 The board application uses [jQuery](http://jquery.com), [Mustache for JS](https://github.com/janl/mustache.js) and the [eventHub](https://github.com/leftieFriele/eventhub) JS libraries in order to make it's magic.
 The list view is pretty crap, but we might get round to fixing it.
 
-Developed by [FINN.no](http://finn.no), check our blog for more cool stuff http://tech.finn.no
+Developed by [leftieFriele](https://github.com/leftieFriele) and [joodland](https://github.com/joodland) at [FINN.no](http://finn.no) check out [the FINN.no developer blog](http://tech.finn.no) for more cool stuff http://tech.finn.no
