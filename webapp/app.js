@@ -145,7 +145,7 @@ function retrieveTweets(callback){
 }
 
 function renderTweets(req, res, tweets){
-	if (tweets.length > 0){
+	if (tweets && tweets.length > 0){
 		for (var i=0; i<tweets.length; i++) {
 		   var itemDate = new Date(parseInt(tweets[i].timestamp));
 		   tweets[i].date = itemDate;
