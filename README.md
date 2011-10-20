@@ -47,7 +47,15 @@ Now get the source code for this application
 
 		git clone git@github.com:finn-no/awesomeboard.git
 		
-All that is left now is to configure the application in the [appConfig.js](https://github.com/finn-no/awesomeboard/blob/master/appConfig.js) to reflect your database settings and Twitter account details. 
+All that is left now is to configure the application in the [appConfig.js](https://github.com/finn-no/awesomeboard/blob/master/appConfig.js):
+* `databaseHost` - hostname running MongoDB
+* `databaseName` - name of the MongoDB database
+* `databasePort` - 27017
+* `webappPort` - 29099
+* `twitterUsername` - username
+* `twitterPassword` - password
+* `trackItems` - an array of strings to identify what tweets to trac
+* `follow` - an array of Twitter IDs to follow 
 
 Useage
 ------------
