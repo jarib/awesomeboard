@@ -48,15 +48,15 @@ In order to have anything to display you need to harvest some tweets, here is ho
 
 Start your MongoDB instance
 
-		mongodb --dbpath <some location>
+		$ mongodb --dbpath <some location>
 
 Starting the harvester
 
-    node harvester.js
+    $ node harvester/harvester.js
 	
 Starting the Awesome Board
 
-    node app.js
+    $ node webapp/app.js
 
 Now you can check `http://localhost:29099/` or you can view the list mode on `http://localhost:29099/list`
 

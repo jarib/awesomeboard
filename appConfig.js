@@ -6,5 +6,5 @@ exports.config = {
 	twitterUsername: "",
 	twitterPassword: "",
 	trackItems: ["some", "words"],
-	follow: [<twitter ids>]
+	follow: []
 };
