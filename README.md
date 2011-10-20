@@ -74,7 +74,7 @@ Contribute
 
 Feel free to fork this and do what ever you'd like with it. This code is licensed under the [WTFPL-license](http://sam.zoy.org/wtfpl/)
 
-Any questions or to get notifications follow our (@FINN_tech)[http://twitter.com/#!/FINN_tech] on Twitter.
+Any questions or to get notifications follow our [@FINN_tech](http://twitter.com/#!/FINN_tech) on Twitter.
 
 
 Developed by [leftieFriele](https://github.com/leftieFriele) and [joodland](https://github.com/joodland) at [FINN.no](http://finn.no) check out [the FINN.no developer blog](http://tech.finn.no) for more cool stuff http://tech.finn.no
