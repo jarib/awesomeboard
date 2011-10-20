@@ -178,6 +178,6 @@ function renderTweets(req, res, tweets){
 			}
 		});
 	} else {
-		res.render("tweets", {locals:{}});
+		res.render("awesomeboard", {locals:{}});
 	}
 }
