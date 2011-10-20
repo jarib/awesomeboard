@@ -1,9 +1,9 @@
-var express = require('express'), 
-	mongo = require('mongodb'),
+var express = require("express"), 
+	mongo = require("mongodb"),
 	mu = require("mustache"), 
     fs = require("fs"),
-	http = require('http'),	
-    sys = require('sys'),
+	http = require("http"),	
+    sys = require("sys"),
 	config = require("../appConfig").config,
 	mustacheConfig = require("../lib/mustache-node/mustache-node"), 
 	db, app;
@@ -20,8 +20,9 @@ var mustachePartials = retrievePartials();
 initializeExpressApplication(app);
 initializeDatabase(host, port);
 
+
 app.listen(webappPort);
-sys.log('Express app started on port :' + webappPort);
+sys.log("Express app started on port :" + webappPort);
 
 function initializeDatabase(host, port){
 	sys.log("Connecting to MongoDB " + host + ":" + port);
@@ -58,7 +59,7 @@ function retrievePartials() {
 
 function initializeExpressApplication(app){
 	// Path to our public directory
-	var pub = __dirname + '/public';
+	var pub = __dirname + "/public";
 
 	app.use(app.router);
 	app.use(express.static(pub));
@@ -66,7 +67,7 @@ function initializeExpressApplication(app){
 	app.use(express.bodyParser());
 
 	app.set("view options", {layout: false});
-	app.set('views', __dirname + '/mu');
+	app.set("views", __dirname + "/mu");
 	app.register(".mu", mustacheConfig.config);
 	app.set("view engine", "mu");
 	app.use(express.errorHandler({
@@ -74,7 +75,7 @@ function initializeExpressApplication(app){
 	    showStack:true
 	}));
 	app.get("/list", function(req, res) {
-	   db.collection('tweets', function(err, collection) {
+	   db.collection("tweets", function(err, collection) {
               var hits = 20;
               if (req.query.hits) {
                  hits =  req.query.hits;
@@ -86,7 +87,7 @@ function initializeExpressApplication(app){
                  skip = hits * (page - 1);
               }
               var q = req.query.q;
-	      collection.find({ $or : [ {'nick' : q}, {'tweet' : new RegExp(q) }] }, {'limit':hits, 'skip':skip, 'sort':[['timestamp',-1]]}, function(err, cursor) {
+	      collection.find({ $or : [ {"nick" : q}, {"tweet" : new RegExp(q) }] }, {"limit":hits, "skip":skip, "sort":[["timestamp",-1]]}, function(err, cursor) {
 			cursor.toArray(function(eRr, docs) {
 		    	if (docs.length > 0) {
 			      res.render("list", {
@@ -123,15 +124,15 @@ function initializeExpressApplication(app){
 	app.get("/ping", function(req, res){
 		res.send("pong");
 	});
-	app.get('/', function(req, res){
+	app.get("/", function(req, res){
 		retrieveTweets(function(tweets){
 			renderTweets(req, res, tweets);
 		});
 	});
 }
 function retrieveTweets(callback){
-	db.collection('tweets', function(err, collection) {
-	      collection.find({}, {'limit':20, 'sort':[['timestamp',-1]]}, function(err, cursor) {
+	db.collection("tweets", function(err, collection) {
+	      collection.find({}, {"limit":20, "sort":[["timestamp",-1]]}, function(err, cursor) {
 	         cursor.toArray(function(err, docs) {
 				var tweeeets = {};
 				if (docs.length > 0){

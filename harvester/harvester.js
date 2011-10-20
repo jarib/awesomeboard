@@ -1,6 +1,6 @@
 var mongo = require("mongodb"),
-	twitter = require("../vendor/twitter-node"),
-	sys = require('sys'),
+	twitter = require("twitter-node"),
+	sys = require("sys"),
 	config = require("../appConfig").config,
 	port = config.databasePort;
 
