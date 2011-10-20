@@ -20,7 +20,6 @@ var mustachePartials = retrievePartials();
 initializeExpressApplication(app);
 initializeDatabase(host, port);
 
-
 app.listen(webappPort);
 sys.log("Express app started on port :" + webappPort);
 
@@ -46,7 +45,7 @@ function die(){
  **/
 function retrievePartials() {
 	var fs = require("fs"), partials = {};
-	fs.readFile(__dirname + "/mu/feedback.partial.mu", function(err, data) {
+	fs.readFile(__dirname + "/mu/tweet.partial.mu", function(err, data) {
 		if (err) throw err;
 		partials.mu_feedback_partial = ("" + data).replace(/\n+/g, "");
 	});
@@ -65,15 +64,10 @@ function initializeExpressApplication(app){
 	app.use(express.static(pub));
 	app.use(express.errorHandler({ dump: true, stack: true }));
 	app.use(express.bodyParser());
-
 	app.set("view options", {layout: false});
 	app.set("views", __dirname + "/mu");
 	app.register(".mu", mustacheConfig.config);
 	app.set("view engine", "mu");
-	app.use(express.errorHandler({
-	    dumpExceptions:true, 
-	    showStack:true
-	}));
 	app.get("/list", function(req, res) {
 	   db.collection("tweets", function(err, collection) {
               var hits = 20;
@@ -132,16 +126,16 @@ function initializeExpressApplication(app){
 }
 function retrieveTweets(callback){
 	db.collection("tweets", function(err, collection) {
-	      collection.find({}, {"limit":20, "sort":[["timestamp",-1]]}, function(err, cursor) {
-	         cursor.toArray(function(err, docs) {
-				var tweeeets = [];
-				if (docs.length > 0){
-					tweeeets = docs;
-				}
-				callback(tweeeets);
-	         });
-	      });
-	   });	
+      collection.find({}, {"limit":20, "sort":[["timestamp",-1]]}, function(err, cursor) {
+         cursor.toArray(function(err, docs) {
+			var tweeeets = [];
+			if (docs && docs.length > 0){
+				tweeeets = docs;
+			}
+			callback(tweeeets);
+         });
+      });
+   });	
 }
 
 function renderTweets(req, res, tweets){
@@ -162,22 +156,21 @@ function renderTweets(req, res, tweets){
 		var counter = 0;				
            res.render("awesomeboard", {
 			locals:{ 
-				latest: focusTweet, 
-				tweets: tweets, 
-				smiles: 90,
-				angyr: 10,
-				hasFocusTweet: function(){
-					return (tweets[counter].tweetLinkUrl);
-				},
-				times: function(){
-					return lastUpdated;
-				}
+				latest: focusTweet
 			},partials: {
 				feedback_partial: "" + mustachePartials.mu_feedback_partial,
 				awesome_style_partial: "" + mustachePartials.mu_awesome_style_partial
 			}
-		});
+		   });
 	} else {
-		res.render("awesomeboard", {locals:{}});
+		res.render("awesomeboard", {
+			locals:{ 
+				latest: {}
+			},partials: {
+				feedback_partial: "" + mustachePartials.mu_feedback_partial,
+				awesome_style_partial: "" + mustachePartials.mu_awesome_style_partial
+			}
+
+		});
 	}
 }

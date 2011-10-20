@@ -7,6 +7,7 @@
     </div>
 		{{/user}}{{/source}}
     <div class="twatmessage">{{tweet}}
+		{{^tweet}}Jeg fant ingen tweets, beklager!{{/tweet}}
 		{{#source}}{{#user}}
     	<div class="bubblecrap"></div>
         <div class="twatnick"><a href="http://twitter.com/{{screen_name}}">{{screen_name}}</a> <span>{{name}}</span>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 		<title>Awesomeboard Mark II</title>
 		{{>awesome_style_partial}}
-		<script src="js/lib/jquery/jquery-1.6.2.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		<script src="/js/lib/mustache/mustache.js"></script>
 		<script>
 		var FINN = FINN || {};
