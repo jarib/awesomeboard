@@ -13,7 +13,7 @@ We use this at [FINN.no](http://finn.no) to display customer feedback on various
 Pre-requisits
 ------------
 
-* Sign up for a [Twitter account](http://twitter.com)
+* Sign up for a [Twitter account](http://twitter.com). You need this in order to authenticate with the Streaming API.
 
 Installation
 ------------
@@ -43,6 +43,11 @@ Either install these with NPM or place the content of the modules into the lib d
 		
 [Mustache for NodeJS](https://github.com/raycmorgan/Mu)
 
+Now get the source code for this application
+
+		git clone git@github.com:finn-no/awesomeboard.git
+		
+All that is left now is to configure the application in the [appConfig.js](https://github.com/finn-no/awesomeboard/blob/master/appConfig.js) to reflect your database settings and Twitter account details. 
 
 Useage
 ------------
@@ -72,10 +77,9 @@ The list view is pretty crap, but we might get round to fixing it.
 Contribute
 ------------
 
-Feel free to fork this and do what ever you'd like with it. This code is licensed under the [WTFPL-license](http://sam.zoy.org/wtfpl/)
+Feel free to fork this and do what ever you'd like with it. This code is licensed under the [WTFPL-license](http://sam.zoy.org/wtfpl/).
 
 Any questions or to get notifications follow our [@FINN_tech](http://twitter.com/#!/FINN_tech) on Twitter.
 
-
-Developed by [leftieFriele](https://github.com/leftieFriele) and [joodland](https://github.com/joodland) at [FINN.no](http://finn.no) check out [the FINN.no developer blog](http://tech.finn.no) for more cool stuff http://tech.finn.no
+Developed by [leftieFriele](https://github.com/leftieFriele) and [joodland](https://github.com/joodland) of FINN.no check out [the FINN.no developer blog](http://tech.finn.no) for more cool stuff.
 
