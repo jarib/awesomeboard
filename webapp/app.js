@@ -134,9 +134,8 @@ function retrieveTweets(callback){
 	db.collection("tweets", function(err, collection) {
 	      collection.find({}, {"limit":20, "sort":[["timestamp",-1]]}, function(err, cursor) {
 	         cursor.toArray(function(err, docs) {
-				var tweeeets = {};
+				var tweeeets = [];
 				if (docs.length > 0){
-		            
 					tweeeets = docs;
 				}
 				callback(tweeeets);

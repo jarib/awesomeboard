@@ -2,14 +2,21 @@
 	"name": "awesomeboard", 
 	"description": "Simple harvester and viewer for your Twitter feeds", 
 	"version": "0.0.1", 
-	"author": "Espen Dallokken and Jo Odland", 
+	"author": "Espen Dalløkken and Jo Odland", 
 	"repository": "git://github.com/finn-no/awesomeboard", 
 	"engines": { "node": ">= 0.2.4" },
+	"contributors": [
+		{"name": "Snorre Nygård"},
+		{"name": "Sveinnung Røsaker"}
+	],
+	"bugs": {"web": "http://twitter.com/FINN_tech"},
 	"dependencies": {
     	"express": "2.2.0",
 		"mustache": "0.3.1-dev",
 		"mongodb": "0.9.2",
 		"connect": "1.2.1"
 	},
-	"bugs": {"web": "http://twitter.com/FINN_tech"}
+	"licenses": [
+		{"type": "Do What The Fuck You Want To Public License", "url" : "http://sam.zoy.org/wtfpl/"} 
+	]
 }
