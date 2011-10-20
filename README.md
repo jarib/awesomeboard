@@ -60,6 +60,12 @@ Starting the Awesome Board
 
 Now you can check `http://localhost:29099/` or you can view the list mode on `http://localhost:29099/list`
 
+FAQ
+------------
+
+* There are no Tweets displayed even though my harvester is running: 
+The Harvester uses the real time Streaming API, which means that someone needs to tweet right this moment in order for you to see anything. To test you can just pick a trending topic on Twitter and you will have tweets displayed in no time. The Harvester logs every time it harvests a tweet so you can just keep an eye on it and you will know when you actually have tweets available.
+
 About the Awesome Board
 ------------
 
