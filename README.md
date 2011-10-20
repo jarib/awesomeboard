@@ -22,11 +22,15 @@ We currently only support storing the tweets in MongoDB. Therefor you must insta
 
 * Install [MongoDB](http://www.mongodb.org/) on your machine or on some server
 
-Then just install the awesomeboard npm
+First clone the application
 
-		$ npm install https://github.com/finn-no/awesomeboard/tarball/master
+		$ git clone git@github.com:finn-no/awesomeboard.git
+		
+and then just install the awesomeboard with [http://npm.org](npm)
 
-Now you need to configure the application in order to make the Harvester and Awesome Board work with your settings. This is done by editing the  [appConfig.js](https://github.com/finn-no/awesomeboard/blob/master/appConfig.js) file:
+		$ npm install
+		
+Now that you have everything installedm you need to configure the application in order to make the Harvester and Awesome Board work. This is done by editing the  [appConfig.js](https://github.com/finn-no/awesomeboard/blob/master/appConfig.js) file, below are a description of the settings.
 
 * `databaseHost` - hostname running MongoDB
 * `databaseName` - name of the MongoDB database
