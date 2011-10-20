@@ -10,7 +10,7 @@ The Awesome Board is an [ExpressJS](http://expressjs.com/) web application which
 We use this at [FINN.no](http://finn.no) to display customer feedback on various screens in our office
 
 
-Pre-requisits
+Pre-requisites
 ------------
 
 * Sign up for a [Twitter account](http://twitter.com). You need this in order to authenticate with the Streaming API.
@@ -22,32 +22,11 @@ We currently only support storing the tweets in MongoDB. Therefor you must insta
 
 * Install [MongoDB](http://www.mongodb.org/) on your machine or on some server
 
-Below is a list of the required NodeJS modules.
-Either install these with NPM or place the content of the modules into the lib directory
+Then just install the awesomeboard npm
 
-[ExpressJS](http://expressjs.com/)
+		$ npm install https://github.com/finn-no/awesomeboard/tarball/master
 
-		$ npm install express
-		
-[Mongodb for NodeJS](https://github.com/christkv/node-mongodb-native)
-
-		$ npm install mongodb
-		
-[Twitter-node](https://github.com/technoweenie/twitter-node)
-
-		$ npm install twitter-node
-		
-[Connect](http://senchalabs.github.com/connect/)
-
-		$ npm install connect
-		
-[Mustache for NodeJS](https://github.com/raycmorgan/Mu)
-
-Now get the source code for this application
-
-		git clone git@github.com:finn-no/awesomeboard.git
-		
-All that is left now is to configure the application in the [appConfig.js](https://github.com/finn-no/awesomeboard/blob/master/appConfig.js):
+Now you need to configure the application in order to make the Harvester and Awesome Board work with your settings. This is done by editing the  [appConfig.js](https://github.com/finn-no/awesomeboard/blob/master/appConfig.js) file:
 
 * `databaseHost` - hostname running MongoDB
 * `databaseName` - name of the MongoDB database
@@ -58,7 +37,7 @@ All that is left now is to configure the application in the [appConfig.js](https
 * `trackItems` - an array of strings to identify what tweets to trac
 * `follow` - an array of Twitter IDs to follow 
 
-Useage
+Usage
 ------------
 
 In order to have anything to display you need to harvest some tweets, here is how you start the harvester.
