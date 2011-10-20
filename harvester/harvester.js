@@ -1,7 +1,5 @@
-require.paths.unshift(__dirname + "/../lib");
-
 var mongo = require("mongodb"),
-	twitter = require("twitter-node"),
+	twitter = require("../vendor/twitter-node"),
 	sys = require('sys'),
 	config = require("../appConfig").config,
 	port = config.databasePort;

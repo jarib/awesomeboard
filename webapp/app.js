@@ -1,9 +1,3 @@
-#!/opt/local/bin/node
-/**
- * Simple web application displaying tweets
- **/ 
-require.paths.unshift(__dirname + "/../lib");
-
 var express = require('express'), 
 	mongo = require('mongodb'),
 	mu = require("mustache"), 

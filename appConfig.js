@@ -5,7 +5,6 @@ exports.config = {
 	webappPort: 29099,
 	twitterUsername: "",
 	twitterPassword: "",
-	trackArgument: "",
 	trackItems: ["some", "words"],
 	follow: [<twitter ids>]
 };
