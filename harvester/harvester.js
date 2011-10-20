@@ -4,16 +4,17 @@ var mongo = require("mongodb"),
 	twitter = require("twitter-node"),
 	sys = require('sys'),
 	config = require("../appConfig").config,
-	port = config.port;
+	port = config.databasePort;
 
 console.log("Harvesting started: " + new Date().toString());
 
-var USERNAME = process.ARGV[2] || config.twitterUsername;
-var PASSWORD = process.ARGV[3] || config.twitterPassword;
-var host = process.ARGV[4] || config.databaseHost;
-var trackArgument = config.trackArguments; //(process.ARGV[5]) ? process.ARGV[5].split(",") : null;
+var USERNAME = config.twitterUsername;
+var PASSWORD = config.twitterPassword;
+var host = config.databaseHost;
+var trackArgument = config.trackArguments;
 var trackTheseItems = config.trackItems;
 
+console.log("Configuration:", config.databasePort);
 db = new mongo.Db(config.databaseName, new mongo.Server(host, port, {}), {});
 db.open(function(err, db) {});
 db.addListener("error", function(error){
