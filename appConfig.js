@@ -3,9 +3,9 @@ exports.config = {
 	databaseName: "",
 	databasePort: 27017,
 	webappPort: 29099,
-	twitterUsername: "<twitter account>",
-	twitterPassword: "<twitter passord>",
+	twitterUsername: "",
+	twitterPassword: "",
 	trackArgument: "",
 	trackItems: ["some", "words"],
-	follow: [16738187, 22913112, 87416923]
+	follow: [<twitter ids>]
 };
