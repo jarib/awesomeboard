@@ -36,6 +36,12 @@ Either install these with NPM or place the content of the modules into the lib d
 Useage
 ------------
 
+In order to have anything to display you need to harvest some tweets, here is how you start the harvester.
+
+Start your MongoDB instance
+
+		mongodb --dbpath <some location>
+
 Starting the harvester
 
     node harvester.js
@@ -51,5 +57,11 @@ About the Awesome Board
 
 The board application uses [jQuery](http://jquery.com), [Mustache for JS](https://github.com/janl/mustache.js) and the [eventHub](https://github.com/leftieFriele/eventhub) JS libraries in order to make it's magic.
 The list view is pretty crap, but we might get round to fixing it.
+
+Contribute
+------------
+
+Feel free to fork this and do what ever you'd like with it. 
+The code is licensed under the [WTFPL-license](http://sam.zoy.org/wtfpl/)
 
 Developed by [leftieFriele](https://github.com/leftieFriele) and [joodland](https://github.com/joodland) at [FINN.no](http://finn.no) check out [the FINN.no developer blog](http://tech.finn.no) for more cool stuff http://tech.finn.no
