@@ -48,6 +48,7 @@ Now get the source code for this application
 		git clone git@github.com:finn-no/awesomeboard.git
 		
 All that is left now is to configure the application in the [appConfig.js](https://github.com/finn-no/awesomeboard/blob/master/appConfig.js):
+
 * `databaseHost` - hostname running MongoDB
 * `databaseName` - name of the MongoDB database
 * `databasePort` - 27017
